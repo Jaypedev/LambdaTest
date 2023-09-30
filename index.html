@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theming and Dark Mode Example</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <h3>
+        <a href="https://www.lambdatest.com/"
+          ><img
+            class="logo"
+            src="https://www.lambdatest.com/resources/images/logos/logo.svg"
+            alt="logo"
+        /></a>
+      </h3>
+
+      <!-- Mode Toggler -->
+      <div id="theme-toggle" class="mode-selector">
+        <img
+          id="moon"
+          src="https://drive.google.com/file/d/18OfYvHFn34gNV-TF2ANyaNL3zWwE8lKk/view?usp=drive_link"
+          alt=""
+        />
+        <img
+          id="sun"
+          src="https://drive.google.com/file/d/1F8JfzS4y7YYpA9NKLySeyEzygMSBFYgf/view?usp=drive_link"
+          alt=""
+        />
+      </div>
+
+      <!-- Nav bar -->
+      <ul class="nav-items">
+        <li><a href="https://www.lambdatest.com/feature">Platform</a></li>
+        <li><a href="https://www.lambdatest.com/enterprise">Enterprise</a></li>
+        <li><a href="https://www.lambdatest.com/blog/">Resources</a></li>
+        <li>
+          <a
+            href="https://www.lambdatest.com/support/docs/getting-started-with-lambdatest-automation/"
+            >Developers</a
+          >
+        </li>
+        <li><a href="https://www.lambdatest.com/pricing">Pricing</a></li>
+      </ul>
+
+      <img
+        class="hamburger"
+        src="https://www.lambdatest.com/blog/wp-content/themes/blog/images/sticky-humburger.png"
+        alt=""
+      />
+    </nav>
+    <header class="background-container .container-contain">
+      <!-- <h1>Background Image </h1> -->
+
+      <script>
+        // JavaScript code
+        const themeToggleBtn = document.getElementById("theme-toggle");
+        const sun = document.getElementById("sun");
+        const moon = document.getElementById("moon");
+        const body = document.body;
+
+        // Function to toggle between light and dark themes
+        function toggleTheme() {
+          if (body.classList.contains("dark-theme")) {
+            body.classList.remove("dark-theme");
+            moon.style.display = "block"; // Show the moon icon
+            sun.style.display = "none"; // Hide the sun icon
+          } else {
+            body.classList.add("dark-theme");
+            moon.style.display = "none"; // Hide the moon icon
+            sun.style.display = "block"; // Show the sun icon
+          }
+        }
+
+        // Add click event listener to the theme toggle button
+        themeToggleBtn.addEventListener("click", toggleTheme);
+      </script>
+    </header>
+  </body>
+</html>
