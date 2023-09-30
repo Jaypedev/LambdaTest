@@ -1,82 +1,95 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Theming and Dark Mode Example</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Cejay's Accordion Menu</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
   </head>
   <body>
     <nav>
-      <h3>
-        <a href="https://www.lambdatest.com/"
-          ><img
-            class="logo"
-            src="https://www.lambdatest.com/resources/images/logos/logo.svg"
-            alt="logo"
-        /></a>
-      </h3>
-
-      <!-- Mode Toggler -->
-      <div id="theme-toggle" class="mode-selector">
-        <img
-          id="moon"
-          src="https://drive.google.com/file/d/18OfYvHFn34gNV-TF2ANyaNL3zWwE8lKk/view?usp=drive_link"
-          alt=""
-        />
-        <img
-          id="sun"
-          src="https://drive.google.com/file/d/1F8JfzS4y7YYpA9NKLySeyEzygMSBFYgf/view?usp=drive_link"
-          alt=""
-        />
-      </div>
-
-      <!-- Nav bar -->
+      <h3><a href="https://www.lambdatest.com/"><img class="logo" src="https://www.lambdatest.com/resources/images/logos/logo.svg" alt="logo"></a></h3>
       <ul class="nav-items">
         <li><a href="https://www.lambdatest.com/feature">Platform</a></li>
         <li><a href="https://www.lambdatest.com/enterprise">Enterprise</a></li>
         <li><a href="https://www.lambdatest.com/blog/">Resources</a></li>
-        <li>
-          <a
-            href="https://www.lambdatest.com/support/docs/getting-started-with-lambdatest-automation/"
-            >Developers</a
-          >
-        </li>
+        <li><a href="https://www.lambdatest.com/support/docs/getting-started-with-lambdatest-automation/">Developers</a></li>
         <li><a href="https://www.lambdatest.com/pricing">Pricing</a></li>
       </ul>
-
-      <img
-        class="hamburger"
-        src="https://www.lambdatest.com/blog/wp-content/themes/blog/images/sticky-humburger.png"
-        alt=""
-      />
+      
+      <img class="hamburger" src="https://www.lambdatest.com/blog/wp-content/themes/blog/images/sticky-humburger.png" alt="">
     </nav>
-    <header class="background-container .container-contain">
-      <!-- <h1>Background Image </h1> -->
-
-      <script>
-        // JavaScript code
-        const themeToggleBtn = document.getElementById("theme-toggle");
-        const sun = document.getElementById("sun");
-        const moon = document.getElementById("moon");
-        const body = document.body;
-
-        // Function to toggle between light and dark themes
-        function toggleTheme() {
-          if (body.classList.contains("dark-theme")) {
-            body.classList.remove("dark-theme");
-            moon.style.display = "block"; // Show the moon icon
-            sun.style.display = "none"; // Hide the sun icon
-          } else {
-            body.classList.add("dark-theme");
-            moon.style.display = "none"; // Hide the moon icon
-            sun.style.display = "block"; // Show the sun icon
-          }
-        }
-
-        // Add click event listener to the theme toggle button
-        themeToggleBtn.addEventListener("click", toggleTheme);
-      </script>
-    </header>
+    <ul class="accordion-menu">
+      <li>
+        <div class="dropdownHeader">
+          <span>Platform</span>
+          <img class="fa fa-chevron-down"  src="./images/down-chevron-svgrepo-com.svg" alt="">
+        </div>
+        <ul class="submenuItems">
+          <li>
+            <a href="https://www.lambdatest.com/online-browser-testing">Online Browser Testing</a>
+          </li>
+          <li><a href="https://www.lambdatest.com/selenium-automation">Selenium Testing</a></li>
+          <li><a href="https://www.lambdatest.com/cypress-testing">Cypress Testing</a></li>
+          <li><a href="https://www.lambdatest.com/playwright-testing">Playwright Testing</a></li>
+          <li><a href="https://www.lambdatest.com/hyperexecute">HyperExecute</a></li>
+          <li><a href="https://www.lambdatest.com/on-premise-selenium-grid">On-Premise Selenium Grid</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="dropdownHeader">
+          <span> Enterprise</span>
+          <img class="fa fa-chevron-down"  src="./images/down-chevron-svgrepo-com.svg" alt="">
+        </div>
+        <ul class="submenuItems">
+          <li><a href="https://www.lambdatest.com/enterprise">Digital Experince Testing</a></li>
+          <li><a href="https://www.lambdatest.com/enterprise-execution-environment">Enterprise Execution Environment</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="dropdownHeader">
+          <span> Resources </span>
+          <img class="fa fa-chevron-down"  src="./images/down-chevron-svgrepo-com.svg" alt="">
+        </div>
+        <ul class="submenuItems">
+          <li><a href="https://www.lambdatest.com/blog/">Blog</a></li>
+          <li><a href="https://www.lambdatest.com/webinar/">Webinars</a></li>
+          <li><a href="https://www.lambdatest.com/learning-hub/">Learning Hub</a></li>
+          <li><a href="https://www.lambdatest.com/video/">Videos</a></li>
+          <li><a href="https://www.lambdatest.com/customers/">Customers Stories</a></li>
+          <li><a href="https://www.lambdatest.com/community">LambdaTest for Community</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="dropdownHeader">
+          <span> Developers</span>
+          <img class="fa fa-chevron-down"  src="./images/down-chevron-svgrepo-com.svg" alt="">
+        </div>
+        <ul class="submenuItems">
+          <li><a href="https://www.lambdatest.com/support/docs/getting-started-with-lambdatest-automation/">Selenium</a></li>
+          <li><a href="https://www.lambdatest.com/support/docs/getting-started-with-cypress-testing/">Cypress</a></li>
+          <li><a href="https://www.lambdatest.com/support/docs/mobile-web-automation-on-real-devices/">Mobile App Testing</a></li>
+          <li><a href="https://www.lambdatest.com/support/docs/real-time-browser-testing/">Real Time Web Testing</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="dropdownHeader">
+          <span> Pricing</span>
+          <img class="fa fa-chevron-down"  src="./images/down-chevron-svgrepo-com.svg" alt="">
+        </div>
+        <ul class="submenuItems">
+          <li><a href="https://www.lambdatest.com/pricing">Manual Testing</a></li>
+          <li><a href="https://www.lambdatest.com/pricing">Web Automation Testing</a></li>
+          <li><a href="https://www.lambdatest.com/pricing">Native App Automation</a></li>
+          <li><a href="https://www.lambdatest.com/pricing">HyperExecute</a></li>
+          <li><a href="https://www.lambdatest.com/pricing">Smart UI</a></li>
+        </ul>
+      </li>
+    </ul>
   </body>
 </html>
