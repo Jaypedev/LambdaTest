@@ -1,55 +1,121 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Gallery with object-fit</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f0f0f0;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object fit.</title>
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 26px;
-      max-width: 800px;
-    }
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <h3>
+        <a href="https://www.lambdatest.com/"
+          ><img
+            class="logo"
+            src="https://www.lambdatest.com/resources/images/logos/logo.svg"
+            alt="logo"
+        /></a>
+      </h3>
+      <ul class="nav-items">
+        <li><a href="https://www.lambdatest.com/feature">Platform</a></li>
+        <li><a href="https://www.lambdatest.com/enterprise">Enterprise</a></li>
+        <li><a href="https://www.lambdatest.com/blog/">Resources</a></li>
+        <li>
+          <a
+            href="https://www.lambdatest.com/support/docs/getting-started-with-lambdatest-automation/"
+            >Developers</a
+          >
+        </li>
+        <li><a href="https://www.lambdatest.com/pricing">Pricing</a></li>
+      </ul>
 
-    .gallery img {
-      width: 100%;
-      height: 100%;
-      padding: 5px;
-      background-color:  blue;
-      object-fit: cover; 
-      /* Change to 'contain' or 'fill' for different effects */
-      border-radius: 8px;
-      transition: transform 0.3s ease-in-out;
-      cursor: pointer;
-    }
+      <img
+        class="hamburger"
+        src="https://www.lambdatest.com/blog/wp-content/themes/blog/images/sticky-humburger.png"
+        alt=""
+      />
+    </nav>
+    <header>
+      <h2>LAMBDATEST BLOG</h2>
+      <p>
+        Our blog on Selenium automation testing, browser compatibility testing,
+        web development, and updates
+      </p>
+      <p class="filter">
+        Recent Posts Infographics Product Updates Webinars Community
+      </p>
+    </header>
+    <main>
+      <div class="blog">
+        <div class="blog-image">
+          <img src="./images/Step-By-Step-Guide.png" alt="" />
+        </div>
+        <div class="content">
+          <h4 class="category"> • Web Development • LambdaTest Experiments </h4>
+          <h3>CSS Image Resizing : Step-By-Step Guide</h3>
+          <p>
+            In the modern web landscape, the significance of images cannot be overstated. They enhance the aesthetic appeal of websites, captivate users by drawing their attention, convey emotions, and create a strong first impression.
+          </p>
 
-    .gallery img:hover {
-      transform: scale(1.1);
-    }
-  </style>
-</head>
-<body>
-  <div class="gallery">
-    <!-- Replace these image sources with your own -->
-    
-    <img src="https://images.pexels.com/photos/1552103/pexels-photo-1552103.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Image 1">
-    <img src="https://images.pexels.com/photos/1552103/pexels-photo-1552103.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Image 1">
-    <img src="https://images.pexels.com/photos/1552103/pexels-photo-1552103.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Image 1">
-    <img src="https://images.pexels.com/photos/1552103/pexels-photo-1552103.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Image 1">
-    <img src="https://images.pexels.com/photos/1552103/pexels-photo-1552103.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Image 1">
-    
-    <img src="https://images.pexels.com/photos/1552103/pexels-photo-1552103.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Image 1">
-    <!-- Add more images as needed -->
-  </div>
-</body>
+          <div class="info">
+            <div class="writer">
+              <div class="writer-image">
+                <img src="./images/jaypee.jpeg" alt="" />
+              </div>
+              <div class="name">Peter Ejembi</div>
+            </div>
+            <div class="blog-info">
+              <div></div>
+              <p class="date">October 23, 2023
+
+              </p>
+              <div></div>
+              <p class="view">👁 63456 Views
+
+              </p>
+              <div></div>
+              <p class="min">🕒 25 Min Read</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="blog">
+        <div class="blog-image">
+          <img src="./images/Cracking-the-Code.png" alt="" />
+        </div>
+        <div class="content">
+          <h4 class="category">
+            • Web Development • LambdaTest Experiments •Tutorial
+          </h4>
+          <h3>Cracking the Code of CSS Specificity: A Developer’s Toolkit</h3>
+          <p>
+            Cascading Style Sheets (CSS) is the backbone behind every
+            pixel-perfect layout, beautifully styled button, and color scheme.
+            It is more like the system that shapes the web designs we navigate
+            daily.
+          </p>
+
+          <div class="info">
+            <div class="writer">
+              <div class="writer-image">
+                <img src="./images/clinton.jpeg" alt="" />
+              </div>
+              <p class="name">Clinton Joy</p>
+            </div>
+            <div class="blog-info">
+              <div></div>
+              <p class="date">December 5, 2023</p>
+              <div></div>
+              <p class="view">👁 314375 Views</p>
+              <div></div>
+              <p class="min">🕒 23 Min Read</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
